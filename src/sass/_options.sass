@@ -1,0 +1,43 @@
+// ============================
+// COLORS
+// ============================
+
+$mainC1: #3abc4d
+$mainC2: #000
+$socsC1: (telegram: #4496dc, viber: #a762c7, whatsapp: #3abc4d)
+	
+// ============================
+// MEDIA
+// ============================
+
+$mediaBp: (1190px, 980px, 768px, 640px, 480px, 320px)
+
+// ============================
+// FUNCTIONS
+// ============================
+
+@function col-width($n)
+	@if $n == auto
+		@return auto
+	@else
+		@return calc(100% / #{$n})
+
+// ============================
+// MIXINS
+// ============================
+
+@mixin flex ($d: flex, $jc: flex-start, $ji: stretch, $fw: nowrap, $ai: stretch, $fd: row)
+	display: $d
+	flex-flow: $fd $fw
+	justify-content: $jc
+	justify-items: $ji
+	align-items: $ai
+
+@mixin grid ($s: 10px, $w: nowrap, $c: auto)
+	&-grid
+		@include flex($fw: $w)
+		margin: -#{$s}
+		&__col
+			width: col-width($c) 
+			padding: $s
+		

@@ -1,11 +1,16 @@
 <template>
-  <div id="app">
+  <app-root>
     
-  </div>
+  </app-root>
 </template>
 
 <script>
+import appRoot from '@/components/Root'
+
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    appRoot
+  }
 }
 </script>
