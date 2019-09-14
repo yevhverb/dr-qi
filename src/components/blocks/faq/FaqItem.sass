@@ -1,0 +1,63 @@
+.faq-item
+  width: 100%
+  max-width: 575px
+  margin: auto
+  font-size: 13px
+
+  &__title
+    position: relative
+    padding: 25px
+    padding-right: 45px
+    font-size: 1.15em
+    font-weight: 400
+    user-select: none
+    cursor: pointer
+    @media (max-width: nth($mediaBp, 4))
+      font-size: 1.07em
+      padding: 20px
+
+    &::after 
+      content: '\f078',
+      position: absolute
+      top: 0
+      right: 0
+      padding: 25px
+      font-family: 'Font Awesome 5 Free'
+      font-weight: 900
+      font-size: 1em
+      color: $mainC1
+      transition: .3s ease-in-out
+      @media (max-width: nth($mediaBp, 4))
+        padding: 20px
+
+    &_open::after 
+      transform: rotate(180deg)
+
+  &__text
+
+    p
+      padding: 25px
+      padding-top: 0
+      @media (max-width: nth($mediaBp, 4))
+        padding: 20px
+        padding-top: 0
+      
+  &-text
+
+    &-enter,
+    &-leave-to
+      opacity: .5
+      max-height: 0
+      overflow: hidden
+
+    &-leave,
+    &-enter-to
+      opacity: 1
+      max-height: 200px
+      overflow: hidden
+
+    &-enter-active
+      transition: .325s ease-in
+
+    &-leave-active
+      transition: .325s ease-out

@@ -17,10 +17,12 @@
           <app-diff-item :item="item"/>
         </swiperSlide>
         <div class="swiper-pagination" slot="pagination"></div>
-        <div class="swiper-button-prev" slot="button-prev" v-if="mediaQuery('min', 5)">
+        <div class="swiper-button-prev" slot="button-prev" 
+          v-show="mediaQuery('min', 5)">
           <i class="fas fa-chevron-left"></i>
         </div>
-        <div class="swiper-button-next" slot="button-next" v-if="mediaQuery('min', 5)">
+        <div class="swiper-button-next" slot="button-next" 
+          v-show="mediaQuery('min', 5)">
           <i class="fas fa-chevron-right"></i>
         </div>
       </swiper>

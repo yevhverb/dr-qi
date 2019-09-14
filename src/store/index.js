@@ -4,6 +4,7 @@ import media from './media'
 import catalog from './catalog'
 import diff from './diff'
 import reviews from './reviews'
+import faq from './faq'
 
 Vue.use(Vuex)
 
@@ -18,6 +19,7 @@ export default new Vuex.Store({
     media,
     catalog,
     diff,
-    reviews
+    reviews,
+    faq
   }
 })
