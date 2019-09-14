@@ -1,0 +1,95 @@
+.catalog-item
+  @include flex($fd: column)
+  position: relative
+  max-width: 380px
+  width: 100%
+  height: 100%
+  margin: auto
+  padding: 25px
+  font-size: 12px
+  @media (max-width: nth($mediaBp, 5))
+    max-width: 320px
+
+  &__dscnt
+    position: absolute
+    top: 15px
+    left: 15px
+    padding: 14px 6px
+    border: 1px solid $mainC1
+      radius: $borRad
+    font-size: 1.17em
+    font-weight: bold
+    color: $mainC1
+
+  &__img
+    flex: 1 0
+    width: 100%  
+
+  &__title
+    margin-top: 13px
+    font-size: 1.67em
+
+    ~ *
+      display: block 
+      margin-top: 15px
+
+  &__avail
+    color: $mainC1
+
+    &-no 
+      color: red
+
+  &__descr
+    padding: 8px 0
+    border-top: 1px solid #ebebeb
+    border-bottom: 1px solid #ebebeb
+    color: #646464
+
+  &__colors
+    @include flex($ai: center)
+
+  &__color
+    display: inline-block
+    width: 25px 
+    height: 25px
+    margin-left: 7px
+    border: 1px solid #bcbbbb
+      radius: $borRad
+
+  &__price
+    @include flex()
+    width: fit-content
+    padding: 15px
+    border-radius: $borRad
+    font-weight: 700
+    background-color: #ecfaee
+
+    &-curr
+      font-size: 1.67em
+
+    &-full
+      margin-left: 12px
+      font-size: 1.17em
+      text-decoration: line-through
+      color: #adc1af
+
+  &__btns
+    @include flex($fw: wrap)
+    @media (max-width: nth($mediaBp, 5))
+      justify-content: center
+
+  &__btn
+
+    &-details
+      max-width: 70px
+      margin-left: 20px
+      font-size: inherit
+      text-align: left
+      text-decoration: underline
+      @media (max-width: nth($mediaBp, 5))
+        max-width: 100%
+        margin-left: 0px
+        margin-top: 25px
+        text-align: center
+
+  

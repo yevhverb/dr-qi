@@ -9,3 +9,7 @@ export default {
   name: 'app-root'
 }
 </script>
+
+<style lang="sass">
+@import './Root'
+</style>

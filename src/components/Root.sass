@@ -1,0 +1,67 @@
+@import '@/sass/_default'
+
+html 
+  font-family: 'Montserrat', sans-serif
+
+.container
+  position: relative
+  width: 100%
+  max-width: nth($mediaBp, 1)
+  padding-left: 10px
+  padding-right: 10px
+  margin-left: auto
+  margin-right: auto
+
+.block 
+  padding: 85px 0
+
+.title
+  position: relative
+  margin: 0
+  margin-bottom: 50px
+  text-align: center
+  font-size: 28px
+
+  &::after 
+    content: ''
+    position: absolute
+    bottom: -15px
+    left: 50%
+    transform: translateX(-50%)
+    width: 70px
+    height: 3px
+    background-color: $mainC1
+
+  &_accent 
+    color: $mainC1
+
+  &_white
+    color: $mainC3
+
+.card
+  border-radius: 10px
+  box-shadow: 0 25px 29px rgba(0, 0, 0, 0.08)  
+  background-color: $mainC3
+
+.btn
+  border: none
+  background: transparent
+  font-family: inherit
+
+  &-primary
+    min-width: 215px
+    padding: 18px
+    border-radius: 50px
+    font-size: 17px
+    font-weight: 700
+    text-shadow: 0 1px 0 #088c5a
+    text-transform: uppercase
+    box-shadow: 0 12px 21px rgba(26, 178, 105, 0.35), 0 3px 0 #098d51, inset 0 3px 7px #90f6af
+    color: #fff
+    background-image: linear-gradient(to top, #009c6a 0%, #06d96e 100%)
+
+.img
+  display: block
+  width: 100%
+  height: 100%
+  object-fit: contain
