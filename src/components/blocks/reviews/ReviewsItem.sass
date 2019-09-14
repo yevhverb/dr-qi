@@ -1,0 +1,54 @@
+.reviews-item
+  @include flex()
+  max-width: 460px
+  margin: auto
+  padding: 20px
+  font-size: 12px
+  @media (max-width: nth($mediaBp, 4))
+    flex-direction: column
+
+    .reviews-item
+
+      &__photo
+        margin: auto
+
+      &__info
+        text-align: center
+        margin-left: 0
+
+  &__photo
+    &-container
+      width: 87px
+      height: 87px
+
+      img 
+        object-fit: cover
+
+  &__info 
+    margin-top: 5px
+    margin-left: 25px
+
+    > *
+      display: block
+
+  &__name 
+    font-size: 1.25em
+    font-weight: 700
+
+  &__original
+    margin-top: 7px
+    font-size: .83em
+    color: #000
+    text-decoration: underline
+
+    ~ * 
+      margin-top: 12px
+
+  &__order
+    padding: 10px 0
+    border-top: 1px solid #ebebeb
+    border-bottom: 1px solid #ebebeb
+
+  &__text
+    color: #646464
+

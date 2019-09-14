@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import { swiper, swiperSlide } from 'vue-awesome-swiper'
+import { swiper, swiperSlide } from 'vue-awesome-swiper';
 import { mapState, mapGetters } from 'vuex';
 
 import appDiffItem from './DiffItem'
@@ -58,7 +58,7 @@ export default {
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
-      },
+      }
     }
   }),
   computed: { 

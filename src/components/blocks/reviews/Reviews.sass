@@ -1,0 +1,18 @@
+.reviews
+
+  &__send
+    display: block
+    margin: auto
+    margin-top: 10px
+  
+  .swiper-slide
+    opacity: 0
+    transition: .3s
+
+    &-active, 
+    &-next
+      opacity: 1
+
+    @media (max-width: nth($mediaBp, 2))
+      &-next 
+        opacity: 0
