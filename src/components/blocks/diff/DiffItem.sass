@@ -1,0 +1,34 @@
+.diff-item
+  @include flex($ai: center)
+  height: 100%
+  max-width: 570px
+  margin: auto
+  padding: 35px
+  font-size: 13px
+  @media (max-width: nth($mediaBp, 4))
+    flex-direction: column
+    padding: 25px
+
+  &__icon
+
+    &-container
+      width: 105px
+      height: 105px
+      @media (max-width: nth($mediaBp, 1))
+        width: 80px
+        height: 80px
+
+  &__info 
+    margin-left: 40px
+    @media (max-width: nth($mediaBp, 4))
+      margin-left: 0
+      text-align: center
+
+  &__title
+    font-size: 1.385em
+    @media (max-width: nth($mediaBp, 4))
+      margin-top: 12px      
+
+  &__text
+    margin-top: 12px
+    line-height: 1.5

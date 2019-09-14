@@ -1,0 +1,41 @@
+.swiper
+
+  &-container
+    padding: 60px 115px
+    padding-top: 10px
+    @media (max-width: nth($mediaBp, 3))
+      padding: 60px 75px
+      padding-top: 10px
+    @media (max-width: nth($mediaBp, 4))
+      padding: 60px 60px
+      padding-top: 10px
+    @media (max-width: nth($mediaBp, 5))
+      padding: 60px 15px
+      padding-top: 10px
+
+  &-slide 
+    @media (max-width: nth($mediaBp, 4))
+      padding: 0 15px
+    @media (max-width: nth($mediaBp, 5))
+      padding: 0
+
+  &-button
+
+    &-prev, &-next
+      @include flex($jc: center, $ai: center) 
+      width: 43px
+      height: 43px
+      border: 2px solid $mainC1
+        radius: $borRad
+      color: $mainC1
+      background: transparent
+      outline: none
+
+  &-pagination
+
+    &-bullets
+      bottom: 18px
+
+    &-bullet-active
+      background-color: $mainC1
+      

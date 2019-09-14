@@ -5,8 +5,16 @@
 </template>
 
 <script>
+import 'swiper/dist/css/swiper.css'
+
+import { mapMutations } from 'vuex';
+
 export default {
-  name: 'app-root'
+  name: 'app-root',
+  methods: mapMutations(['SUBS_WINDOW_WIDTH']),
+  created() {
+    this.SUBS_WINDOW_WIDTH();
+  }
 }
 </script>
 
