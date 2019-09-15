@@ -1,8 +1,10 @@
 <template>
   <app-root>
     <main>
+      <app-preview/>
       <app-catalog/>
       <app-diff/>
+      <app-about/>
       <app-reviews/>
       <app-order/>
       <app-photos/>
@@ -15,8 +17,10 @@
 
 <script>
 import appRoot from '@/components/Root'
+import appPreview from '@/components/blocks/preview/Preview'
 import appCatalog from '@/components/blocks/catalog/Catalog'
 import appDiff from '@/components/blocks/diff/Diff'
+import appAbout from '@/components/blocks/about/About'
 import appReviews from '@/components/blocks/reviews/Reviews'
 import appOrder from '@/components/blocks/order/Order'
 import appPhotos from '@/components/blocks/photos/Photos'
@@ -28,8 +32,10 @@ export default {
   name: 'app',
   components: {
     appRoot,
+    appPreview,
     appCatalog,
     appDiff,
+    appAbout,
     appReviews,
     appOrder,
     appPhotos,

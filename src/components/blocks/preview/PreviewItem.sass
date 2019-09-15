@@ -1,0 +1,24 @@
+.preview-item 
+  height: 100%
+  max-width: 615px
+  margin: auto
+  font-size: 13px
+  @media (max-width: nth($mediaBp, 1))
+    max-width: 500px
+
+  &__img
+    max-height: 240px
+
+    .img 
+      object-fit: cover
+
+  &__info
+    padding: 20px
+
+  &__title
+    font-size: 1.428em
+
+  &__text
+    margin-top: 10px
+    line-height: 1.5
+  

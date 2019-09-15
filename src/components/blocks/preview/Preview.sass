@@ -1,0 +1,120 @@
+.preview
+  @include grid($c: 2)
+  padding-top: 155px
+  padding-bottom: 0
+  font-size: 14px
+  background: url('../../../assets/preview-bg.png') no-repeat center / cover
+  @media (max-width: nth($mediaBp, 1))
+    @include grid($c: 1, $w: wrap)
+
+    &-grid__col
+      width: 100% !important
+      text-align: center
+      max-width: 700px
+      margin: auto
+    
+  @media (max-width: nth($mediaBp, 4))
+    padding-top: 87px
+    font-size: 13px
+
+  &-grid 
+
+    &__col
+
+      &:first-child
+        width: 47.5%
+
+      &:last-child 
+        width: 52.5%
+
+  &__img 
+    width: 100% 
+
+  &__title
+    margin-top: 40px
+    font-size: 2.857em
+    line-height: 1.2
+    @media (max-width: nth($mediaBp, 1))
+      margin-top: 0
+
+  &__descr
+    margin-top: 25px
+    font-size: 1.285em
+    font-weight: 700
+
+  &__benefits
+    @include flex($jc: center)
+    margin-top: 40px
+    @media (max-width: nth($mediaBp, 4))
+      flex-direction: column
+      align-items: center
+    
+  &__benefit
+    @include flex()
+    max-width: 300px
+    @media (max-width: nth($mediaBp, 3))
+      flex-direction: column
+      justify-content: center
+
+    & + & 
+      margin-left: 40px
+      @media (max-width: nth($mediaBp, 4))
+        margin-left: 0
+        margin-top: 20px
+
+    &-icon 
+      font-size: 2.5em
+
+    &-text 
+      margin-left: 25px
+      text-align: left
+      @media (max-width: nth($mediaBp, 3))
+        text-align: center
+        margin-left: 0
+
+  &__actions
+    @include flex($ai: center)
+    margin-top: 35px
+    @media (max-width: nth($mediaBp, 1))
+      flex-direction: column
+      margin: auto
+      margin-top: 45px
+
+    > *
+      display: block
+
+    &-group
+      margin-left: 25px
+      @media (max-width: nth($mediaBp, 1))
+        margin-left: 0
+        margin-top: 25px
+
+    &-btn 
+      padding-left: 35px
+      padding-right: 35px
+
+    &-link 
+      font-size: 2.142em
+      color: #d0d0d0
+
+      & + & 
+        margin-left: 25px
+
+  .container
+    padding-bottom: 30px
+
+  &-items 
+    @include grid($c: 3, $s: 5px)
+
+  .swiper-slide
+    opacity: 0
+    transition: .3s
+
+    &-active, 
+    &-next
+      opacity: 1
+
+    @media (max-width: nth($mediaBp, 2))
+      &-next 
+        opacity: 0
+

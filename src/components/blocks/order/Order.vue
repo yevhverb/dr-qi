@@ -1,5 +1,5 @@
 <template>
-  <article class="order block">
+  <article class="order block deco">
     <div class="container">
       <h2 class="order__title title title_white">Заказать беспроводную зарядку легко</h2>
       <section class="order__benefits">

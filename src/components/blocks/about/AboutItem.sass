@@ -1,0 +1,44 @@
+.about-item
+  @include flex()
+  max-width: 365px
+  font-size: 14px
+  @media (max-width: nth($mediaBp, 1))
+    margin: auto
+  @media (max-width: nth($mediaBp, 5))
+    flex-direction: column
+
+    &__icon
+      margin-right: 0 !important
+      text-align: center
+
+    &__icon, &__text, &__title
+      text-align: center  
+  
+  &__icon
+    min-width: 45px
+    margin-right: 20px
+    text-align: center
+
+    i
+      font-size: 3.214em
+
+  &__info 
+    margin-top: 10px
+
+  &__title
+    font-size: 1.428em
+
+  &__text
+    margin-top: 10px
+    line-height: 1.5
+
+  &_reverse
+    flex-direction: row-reverse
+
+    .about-item
+
+      &__icon 
+        margin-left: 20px
+
+      &__title, &__text
+        text-align: right
