@@ -15,6 +15,15 @@ body
   margin-left: auto
   margin-right: auto
 
+  &-fluid
+    position: relative
+    width: 100%
+    max-width: 1880px
+    padding-left: 7.5px
+    padding-right: 7.5px
+    margin-left: auto
+    margin-right: auto
+
 .block 
   padding: 85px 0
   @media (max-width: nth($mediaBp, 2))
@@ -49,10 +58,17 @@ body
   &_white
     color: $mainC3
 
+.descr
+  text-align: center
+  font-size: 15px
+  @media (max-width: nth($mediaBp, 4))
+    font-size: 13px
+
 .card
   border-radius: 10px
   box-shadow: 0 25px 29px rgba(0, 0, 0, 0.08)  
   background-color: $mainC3
+  overflow: hidden
   @media (max-width: nth($mediaBp, 5))
     box-shadow: 0 25px 17px rgba(0, 0, 0, 0.08)  
 

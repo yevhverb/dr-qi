@@ -19,6 +19,9 @@ $mediaBp: (1190px, 980px, 768px, 640px, 480px, 320px)
 // FUNCTIONS
 // ============================
 
+@function em($n)
+	@return ($n / 16) + 0em
+
 @function col-width($n)
 	@if $n == auto
 		@return auto

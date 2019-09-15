@@ -1,0 +1,12 @@
+.contacts
+  @include grid($c: 4, $w: wrap)
+  color: $mainC3
+  background: url('../../../assets/contacts-bg.jpg') no-repeat center / cover
+  @media (max-width: nth($mediaBp, 2))
+    @include grid($c: 2, $w: wrap)
+
+  &-grid 
+    margin-top: 35px
+
+    &__col
+      @include flex($jc: center)

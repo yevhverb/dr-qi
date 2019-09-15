@@ -1,0 +1,57 @@
+.order
+  @include grid()
+  font-size: 14px
+  color: $mainC3
+  background: url('../../../assets/order-bg.jpg') no-repeat center / cover
+
+  &__benefits
+    @include flex($jc: space-between)
+    max-width: 700px
+    margin: auto
+    margin-bottom: 35px
+    @media (max-width: nth($mediaBp, 3))
+      flex-wrap: wrap
+      justify-content: center
+      > * 
+        max-width: 380px
+    @media (max-width: nth($mediaBp, 5))
+      justify-content: flex-start
+    
+
+  &__benefit
+    @include flex($ai: center)
+    @media (max-width: nth($mediaBp, 3))
+      &:last-child 
+        margin-top: 20px
+
+    &:first-child 
+      max-width: 375px
+
+    &:last-child 
+      max-width: 250px
+
+    &-icon
+      font-size: 30px
+
+    &-descr
+      margin-left: 20px
+
+  .swiper
+    
+    &-slide
+      opacity: 0
+      transition: .3s
+
+      &-active, 
+      &-next
+        opacity: 1
+
+      @media (max-width: nth($mediaBp, 3))
+        &-next 
+          opacity: 0
+
+    &-pagination-bullet
+        background-color: #f9f9f9 
+  
+        &-active
+          background-color: $mainC1  

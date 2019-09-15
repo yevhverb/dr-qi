@@ -6,7 +6,7 @@
         <span class="title_accent">Dr.Qi</span>
         и другими производителями
       </h2>
-      <div class="diff-grid" v-if="mediaQuery('min', 2)">
+      <div class="diff-grid" v-if="mediaQuery('min', 1)">
         <div class="diff-grid__col"
           v-for="(item, i) in diff.items" :key="item.title + i">
           <app-diff-item :item="item"/>
