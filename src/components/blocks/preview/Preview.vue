@@ -33,7 +33,7 @@
             </article>
           </section>
           <section class="preview__actions">
-            <a class="preview__actions-btn btn btn-primary" href="#">Перейти в каталог</a>
+            <a class="preview__actions-btn btn btn-primary" href="#catalog" v-scroll-to="'#catalog'">Перейти в каталог</a>
             <span class="preview__actions-group">
               <a class="preview__actions-link" href="#">
                 <i class="fab fa-apple"></i>

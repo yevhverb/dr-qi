@@ -1,0 +1,79 @@
+.catalog-item-modal
+  @include grid()
+  position: relative
+  padding: 45px
+  font-size: 13px
+  background-color: #fff
+  @media (max-width: nth($mediaBp, 2))
+    @include grid($c: 1, $w: wrap)
+  @media (max-width: nth($mediaBp, 4))
+    padding: 20px
+    font-size: 12px
+
+  &-grid 
+    width: 100%
+
+    &__col:last-child 
+      margin-left: 50px
+      @media (max-width: nth($mediaBp, 2))
+        margin-left: 0
+
+  .catalog-item
+
+    &__title
+      margin-top: 0
+
+    ~ * 
+      margin-top: 20px
+
+  &__benefits
+    margin-top: 30px
+
+  &__benefit
+    @include flex()
+    width: 380px
+
+    & + & 
+      margin-top: 20px
+
+    &-icon
+      min-width: 55px 
+      text-align: center
+      font-size: 2.5em
+      color: #999
+
+    &-text 
+      margin-left: 20px
+
+  &__specs
+
+    &-title
+      margin-bottom: 15px
+      font-size: 1.23em
+
+  &__spec
+    @include flex()
+    width: 100%
+    padding: 5px
+    @media (max-width: nth($mediaBp, 4))
+      display: block
+
+    &:nth-child(even)
+      background-color: #f3f3f3
+
+    > * 
+      display: block
+      vertical-align: top
+
+    &-title
+      width: 31%
+      @media (max-width: nth($mediaBp, 4))
+        width: 100%
+        font-weight: bold
+    
+    &-text 
+      width: 69%
+      margin-left: 25px
+      @media (max-width: nth($mediaBp, 4))
+        margin-left: 0
+        width: 100%

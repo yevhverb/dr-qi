@@ -23,17 +23,26 @@
         <span class="catalog-item__price-full">{{item.price + ' грн.'}}</span>
       </section>
       <section class="catalog-item__btns">
-        <button class="catalog-item__btn-buy btn btn-primary">Купить</button>
-        <button class="catalog-item__btn-details btn">Подробнее о модели</button>
+        <button class="catalog-item__btn-buy btn btn-primary"
+          @click="modalShow({open: true, name: 'catalog-buy', data: item})">
+          Купить
+        </button>
+        <button class="catalog-item__btn-details btn"
+          @click="modalShow({open: true, name: 'catalog-item', data: item})">
+          Подробнее о модели
+        </button>
       </section>
     </section>
   </article>
 </template>
 
 <script>
+import { mapMutations } from 'vuex';
+
 export default {
   name: 'app-catalog-item',
-  props: ['item']
+  props: ['item'],
+  methods: mapMutations(['modalShow'])
 }
 </script>
 

@@ -1,0 +1,79 @@
+.modal
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 9999
+
+  &-enter,
+  &-leave-to
+    opacity: 0
+    transform: scale(1.03)
+
+  &-leave,
+  &-enter-to 
+    opacity: 1
+    transform: scale(1)
+
+  &-enter-active,
+  &-leave-active
+      transition: opacity .4s, transform .3s
+
+  &-lock
+    padding-right: 17px
+    overflow: hidden 
+    @media (max-width: nth($mediaBp, 1))
+      padding-right: 0
+
+  &-font,
+  &-content
+    margin-right: 17px
+    @media (max-width: nth($mediaBp, 1))
+      margin-right: 0
+
+  &-back,
+  &-front
+    position: absolute
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+
+  &-back
+    background: rgba(0,0,0,.5)
+
+    &-enter,
+    &-leave-to
+      opacity: 0
+
+    &-leave,
+    &-enter-to 
+      opacity: 1
+
+    &-enter-active,
+    &-leave-active
+      transition: .2s
+
+  &-front
+    @include flex($jc: center)
+    padding: 50px 0
+    overflow: auto
+
+    &-enter,
+    &-leave-to
+      opacity: 0
+      transform: scale(1.1)
+
+    &-leave,
+    &-enter-to 
+      opacity: 1
+      transform: scale(1)
+
+    &-enter-active,
+    &-leave-active
+      transition: opacity .4s, transform .3s
+
+  &-content
+    width: fit-content 
+    height: fit-content

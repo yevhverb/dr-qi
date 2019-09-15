@@ -1,5 +1,5 @@
 <template>
-  <article class="catalog block">
+  <article class="catalog block" id="catalog">
     <div class="container">
       <h2 class="title">
         Каталог беспроводных зарядных устройств

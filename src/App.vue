@@ -12,10 +12,15 @@
       <app-contacts/>
     </main>
     <app-footer/>
+    <transition name="modal">
+      <elem-modal v-if="modalOpen"/>
+    </transition>
   </app-root>
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 import appRoot from '@/components/Root'
 import appPreview from '@/components/blocks/preview/Preview'
 import appCatalog from '@/components/blocks/catalog/Catalog'
@@ -27,6 +32,8 @@ import appPhotos from '@/components/blocks/photos/Photos'
 import appFaq from '@/components/blocks/faq/Faq'
 import appContacts from '@/components/blocks/contacts/Contacts'
 import appFooter from '@/components/blocks/footer/Footer'
+
+import elemModal from '@/components/elems/modal/Modal'
 
 export default {
   name: 'app',
@@ -41,7 +48,9 @@ export default {
     appPhotos,
     appFaq,
     appContacts,
-    appFooter
-  }
+    appFooter,
+    elemModal
+  },
+  computed: mapState(['modalOpen'])
 }
 </script>

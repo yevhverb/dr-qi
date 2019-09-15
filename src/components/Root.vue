@@ -7,7 +7,7 @@
 <script>
 import 'swiper/dist/css/swiper.css'
 
-import { mapMutations } from 'vuex';
+import { mapMutations, mapState } from 'vuex';
 
 export default {
   name: 'app-root',
