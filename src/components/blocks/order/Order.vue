@@ -37,6 +37,11 @@
           <i class="fas fa-chevron-right"></i>
         </div>
       </swiper>
+      <transition name="modal">
+        <elem-modal v-if="modalOpen && modalName === 'order'">
+          <app-order-modal/>
+        </elem-modal>
+      </transition>
     </div>
   </article>
 </template>
@@ -46,11 +51,13 @@ import { swiper, swiperSlide } from 'vue-awesome-swiper';
 import { mapState, mapGetters } from 'vuex';
 
 import appOrderItem from './OrderItem';
+import appOrderModal from './OrderModal';
 
 export default {
   name: 'app-order',
   components: {
     appOrderItem,
+    appOrderModal,
     swiper,
     swiperSlide
   },
@@ -78,7 +85,7 @@ export default {
     }
   }),
   computed: {
-    ...mapState(['order']),
+    ...mapState(['order', 'modalOpen', 'modalName']),
     ...mapGetters(['mediaQuery'])
   }
 }

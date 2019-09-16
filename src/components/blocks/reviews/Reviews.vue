@@ -18,21 +18,33 @@
           <i class="fas fa-chevron-right"></i>
         </div>
       </swiper>
-      <button class="reviews__send btn btn-secondary">Оставить отзыв</button>
+      <button class="reviews__send btn btn-secondary"
+        @click="SHOW_MODAL({open: true, name: 'reviews', data: {}})">Оставить отзыв</button>
+      
+      <transition name="modal">
+        <elem-modal v-if="modalOpen && modalName === 'reviews'">
+          <div :class="{'container': mediaQuery('max', 4)}">
+            <app-reviews-modal/>
+          </div>
+        </elem-modal>
+      </transition>
+
     </div>
   </article>
 </template>
 
 <script>
 import { swiper, swiperSlide } from 'vue-awesome-swiper';
-import { mapState, mapGetters } from 'vuex';
+import { mapState, mapGetters, mapMutations } from 'vuex';
 
 import appReviewsItem from './ReviewsItem';
+import appReviewsModal from './ReviewsModal';
 
 export default {
   name: 'app-reviews',
   components: {
     appReviewsItem,
+    appReviewsModal,
     swiper, 
     swiperSlide
   },
@@ -59,9 +71,10 @@ export default {
     }
   }),
   computed: {
-    ...mapState(['reviews']),
+    ...mapState(['reviews', 'modalOpen', 'modalName']),
     ...mapGetters(['mediaQuery'])
-  }
+  },
+  methods: mapMutations(['SHOW_MODAL'])
 }
 </script>
 

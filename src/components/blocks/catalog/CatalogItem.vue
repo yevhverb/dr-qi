@@ -28,7 +28,7 @@
           Купить
         </button>
         <button class="catalog-item__btn-details btn"
-          @click="modalShow({open: true, name: 'catalog-item', data: item})">
+          @click="SHOW_MODAL({open: true, name: 'catalog-item', data: item})">
           Подробнее о модели
         </button>
       </section>
@@ -61,7 +61,7 @@ export default {
   data: () => ({
     formOrderOpen: false
   }),
-  methods: mapMutations(['modalShow'])
+  methods: mapMutations(['SHOW_MODAL'])
 }
 </script>
 

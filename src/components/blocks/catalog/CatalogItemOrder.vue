@@ -1,7 +1,7 @@
 <template>
   <form class="catalog-item-order"
     :class="{'catalog-item-order_inner': inner}" 
-    @submit.prevent="">
+    @submit.prevent="showMessage()">
     <section class="catalog-item-order__info">
       <h3 class="catalog-item-order__title">{{'Купить ' + item.title}}</h3>
       <p class="catalog-item-order__text">Введите своё имя и телефон, менеджер перезвонит чтобы подтвердить заказ</p>
@@ -13,8 +13,7 @@
       <div class="catalog-item-order__input input input-phone">
         <input type="text" placeholder="Ваш номер телефона">
       </div>
-      <button class="catalog-item-order__btn btn btn-primary"
-        @click="showMessage()">
+      <button class="catalog-item-order__btn btn btn-primary" type="submit">
         Купить эту модель
       </button>
     </section>
@@ -38,9 +37,7 @@ export default {
   methods: {
     showMessage() {
       this.messageOpen = true;
-      setTimeout(() => {
-        this.messageOpen = false;
-      }, 3500);
+      setTimeout(() => this.messageOpen = false, 3500);
     }
   }
 }

@@ -13,8 +13,8 @@
       </div>
 
       <transition name="modal">
-        <elem-modal v-if="modalOpen">
-          <app-catalog-item-modal v-if="modalName === 'catalog-item'"/>
+        <elem-modal v-if="modalOpen && modalName === 'catalog-item'">
+          <app-catalog-item-modal/>
         </elem-modal>
       </transition>
 

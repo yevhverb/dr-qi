@@ -20,7 +20,7 @@ export default new Vuex.Store({
     modalData: {}
   },
   mutations: {
-    modalShow(state, modal) {
+    SHOW_MODAL(state, modal) {
       state.modalOpen = modal.open;
       state.modalName = modal.name;
       state.modalData = modal.data;

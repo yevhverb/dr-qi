@@ -1,0 +1,44 @@
+.review-modal
+  position: relative
+  width: 380px
+  padding: 45px
+  text-align: center
+  font-size: 13px
+  background: #fff
+  @media (max-width: nth($mediaBp, 5))
+    width: 100%
+    padding: 30px 20px
+
+  &__title
+    font-size: 1.538em
+
+  &__text
+    margin-top: 10px
+
+  &__form
+    margin-top: 15px 
+
+    > * 
+      margin-top: 10px 
+
+  &__input 
+
+    textarea 
+      height: 200px
+      resize: none
+
+  &__btn 
+    width: 100%
+
+  &__message
+    @include flex($jc: center, $ai: center)
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 20
+    padding: 30px
+    font-size: 1.2em
+    color: $mainC1
+    background: rgba(255,255,255,.98)

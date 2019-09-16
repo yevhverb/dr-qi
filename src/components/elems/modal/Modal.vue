@@ -20,10 +20,10 @@ export default {
   name: 'elem-modal',
   computed: mapState(['modalOpen']),
   methods: {
-    ...mapMutations(['modalShow']),
+    ...mapMutations(['SHOW_MODAL']),
     modalClose() {
       const classList = event.target.classList;
-      if (classList.contains('modal-front') || classList.contains('modal-content')) this.modalShow({open: false, name: ''});
+      if (classList.contains('modal-front') || classList.contains('modal-content')) this.SHOW_MODAL({open: false, name: ''});
     }
   },
   beforeCreate() {
