@@ -20,6 +20,7 @@
     font-size: 1.17em
     font-weight: bold
     color: $mainC1
+    background: #fff
 
   &__img
     flex: 1 0
@@ -91,5 +92,27 @@
         margin-left: 0px
         margin-top: 25px
         text-align: center
+
+    &-back
+      @include flex($jc: center, $ai: center)
+      position: absolute
+      z-index: 20 
+      width: 45px
+      height: 45px
+      border: 1px solid $mainC1
+        radius: $borRad
+      font-size: 1.75em
+      color: $mainC1
+
+  &__form
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 10
+    padding: 16px
+    background: rgba(255,255,255,.98)
+
 
   

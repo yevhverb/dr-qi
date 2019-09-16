@@ -1,0 +1,64 @@
+.catalog-item-order
+  @include flex($fd: column, $ai: center, $jc: center)
+  position: relative
+  height: 100%
+  padding: 40px
+  text-align: center
+  font-size: 13px
+  @media (max-width: nth($mediaBp, 5))
+    padding: 40px 15px
+
+  &_inner
+
+    &.catalog-item-order
+      @include flex($ai: center, $jc: center)
+      height: auto
+      @media (max-width: nth($mediaBp, 1))
+        flex-direction: column
+
+    > * 
+      width: 50%
+      text-align: left
+      @media (max-width: nth($mediaBp, 1))
+        width: 100%
+        text-align: center
+
+    .catalog-item-order
+
+      &__form 
+        margin-top: 0
+
+      &__message
+        width: 100%
+        height: 100%
+
+  &__title
+    font-size: 1.538em
+
+    ~ *
+      margin-top: 12px
+
+  &__form
+    margin-top: 30px 
+
+    > * 
+      margin-top: 10px
+
+  &__btn 
+    width: 100%
+    @media (max-width: nth($mediaBp, 5))
+      min-width: 100%
+
+  &__message
+    @include flex($jc: center, $ai: center)
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 20
+    padding: 50px
+    text-align: center
+    font-size: 1.1em
+    color: $mainC1
+    background: rgba(255,255,255,.98)

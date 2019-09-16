@@ -4,11 +4,9 @@
       <div class="modal-back" v-if="modalOpen"></div>
     </transition>
     <transition name="modal-front" appear>
-      <div class="modal-front" 
-        v-if="modalOpen"
-        @click="modalClose()">
+      <div class="modal-front" v-if="modalOpen" @click="modalClose()">
         <div class="modal-content">
-          <app-catalog-item-modal v-if="modalName === 'catalog-item'" />
+          <slot/>
         </div>
       </div>
     </transition>
@@ -18,18 +16,14 @@
 <script>
 import { mapMutations, mapState } from 'vuex';
 
-import appCatalogItemModal from '@/components/blocks/catalog/CatalogItemModal'
-
 export default {
   name: 'elem-modal',
-  components: {
-    appCatalogItemModal
-  },
-  computed: mapState(['modalOpen', 'modalName']),
+  computed: mapState(['modalOpen']),
   methods: {
     ...mapMutations(['modalShow']),
     modalClose() {
-      if (event.target.classList.contains('modal-front')) this.modalShow({open: false, name: ''});
+      const classList = event.target.classList;
+      if (classList.contains('modal-front') || classList.contains('modal-content')) this.modalShow({open: false, name: ''});
     }
   },
   beforeCreate() {

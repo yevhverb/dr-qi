@@ -26,19 +26,13 @@
     @media (max-width: nth($mediaBp, 1))
       padding-right: 0
 
-  &-font,
-  &-content
-    margin-right: 17px
-    @media (max-width: nth($mediaBp, 1))
-      margin-right: 0
-
   &-back,
   &-front
     position: absolute
     top: 0
     left: 0
-    width: 100vw
-    height: 100vh
+    min-width: 100vw
+    min-height: 100vh
 
   &-back
     background: rgba(0,0,0,.5)
@@ -57,8 +51,11 @@
 
   &-front
     @include flex($jc: center)
-    padding: 50px 0
-    overflow: auto
+    height: 100%
+    padding: 50px
+    overflow-y: auto
+    @media (max-width: nth($mediaBp, 5))
+      padding: 10px
 
     &-enter,
     &-leave-to
@@ -75,5 +72,4 @@
       transition: opacity .4s, transform .3s
 
   &-content
-    width: fit-content 
-    height: fit-content
+    margin: auto 0

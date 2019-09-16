@@ -24,7 +24,7 @@
       </section>
       <section class="catalog-item__btns">
         <button class="catalog-item__btn-buy btn btn-primary"
-          @click="modalShow({open: true, name: 'catalog-buy', data: item})">
+          @click="formOrderOpen = true">
           Купить
         </button>
         <button class="catalog-item__btn-details btn"
@@ -33,15 +33,34 @@
         </button>
       </section>
     </section>
+    
+    <transition name="modal">
+      <section class="catalog-item__form" v-if="formOrderOpen">
+        <button class="catalog-item__btn-back btn" 
+          @click="formOrderOpen = false">
+          <i class="fas fa-times"></i>
+        </button>
+        <app-catalog-item-order :item="item"/>
+      </section>
+    </transition>
+
   </article>
 </template>
 
 <script>
 import { mapMutations } from 'vuex';
 
+import appCatalogItemOrder from './CatalogItemOrder';
+
 export default {
   name: 'app-catalog-item',
+  components: {
+    appCatalogItemOrder
+  },
   props: ['item'],
+  data: () => ({
+    formOrderOpen: false
+  }),
   methods: mapMutations(['modalShow'])
 }
 </script>

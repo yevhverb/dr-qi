@@ -89,6 +89,11 @@ body
     box-shadow: 0 12px 21px rgba(26, 178, 105, 0.35), 0 3px 0 #098d51, inset 0 3px 7px #90f6af
     color: #fff
     background-image: linear-gradient(to top, #009c6a 0%, #06d96e 100%)
+    @media (max-width: nth($mediaBp, 3))
+      font-size: 15px
+    @media (max-width: nth($mediaBp, 5))
+      font-size: 13px
+    
 
   &-secondary
     padding: 15px 20px
@@ -99,6 +104,40 @@ body
     text-transform: uppercase
     color: #0abd6f
     background-color: #fff
+
+.input
+  width: 100%
+
+  &-person,
+  &-phone
+    position: relative
+
+    &::before
+      position: absolute
+      top: 50%
+      left: 22px
+      transform: translateY(-50%)
+      font-family: 'Font Awesome 5 Free'
+      font-weight: 900
+      color: #878787
+
+  &-person::before 
+    content: '\f007'
+
+  &-phone::before
+    content: '\f095'
+
+  input
+    width: 100%
+    padding: 20px 45px
+    padding-right: 20px
+    border: 2px solid #e1e1e1
+      radius: 50px
+    font-family: inherit
+    font-size: 14px
+
+    &::placeholder
+      color: #878787
 
 .img
   display: block

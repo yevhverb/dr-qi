@@ -1,17 +1,19 @@
 .catalog-item-modal
   @include grid()
   position: relative
+  margin: auto
   padding: 45px
   font-size: 13px
   background-color: #fff
   @media (max-width: nth($mediaBp, 2))
     @include grid($c: 1, $w: wrap)
   @media (max-width: nth($mediaBp, 4))
-    padding: 20px
+    padding: 5px
     font-size: 12px
 
   &-grid 
     width: 100%
+    margin: auto
 
     &__col:last-child 
       margin-left: 50px
@@ -32,6 +34,8 @@
   &__benefit
     @include flex()
     width: 380px
+    @media (max-width: nth($mediaBp, 4))
+      width: 100%
 
     & + & 
       margin-top: 20px

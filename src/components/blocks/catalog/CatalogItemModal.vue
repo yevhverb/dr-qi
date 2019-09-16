@@ -52,21 +52,30 @@
               <span class="catalog-item-modal__spec-text">{{spec.text}}</span>
             </div>
           </section>
+          <app-catalog-item-order class="card" :item="item" :inner="true"/>  
         </div>
-
       </div>
     </article>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapGetters } from 'vuex';
+
+import appCatalogItemOrder from './CatalogItemOrder';
 
 export default {
   name: 'app-catalog-item-modal',
-  computed: mapState({
-    item: state => state.modalData
-  })
+  components: {
+    appCatalogItemOrder
+  },
+  computed: {
+    ...mapState({
+      item: state => state.modalData
+    }),
+    ...mapGetters(['mediaQuery'])
+  }
+
 }
 </script>
 

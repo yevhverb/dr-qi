@@ -11,6 +11,13 @@
           <app-catalog-item :item="item"/>
         </div>
       </div>
+
+      <transition name="modal">
+        <elem-modal v-if="modalOpen">
+          <app-catalog-item-modal v-if="modalName === 'catalog-item'"/>
+        </elem-modal>
+      </transition>
+
     </div>
   </article>
 </template>
@@ -19,13 +26,15 @@
 import { mapState } from 'vuex';
 
 import appCatalogItem from './CatalogItem';
+import appCatalogItemModal from './CatalogItemModal';
 
 export default {
   name: 'app-catalog',
   components: {
-    appCatalogItem
+    appCatalogItem,
+    appCatalogItemModal
   },
-  computed: mapState(['catalog'])
+  computed: mapState(['catalog', 'modalOpen', 'modalName'])
 }
 </script>
 
