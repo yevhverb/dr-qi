@@ -15,11 +15,13 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    navOpen: false,
     modalOpen: false,
     modalName: '',
     modalData: {}
   },
   mutations: {
+    SHOW_NAV: (state, open) => state.navOpen = open,
     SHOW_MODAL(state, modal) {
       state.modalOpen = modal.open;
       state.modalName = modal.name;

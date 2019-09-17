@@ -6,6 +6,8 @@
   font-size: 13px
   color: $mainC2
   background: $mainC3
+  @media (max-width: nth($mediaBp, 4))
+    padding: 35px 25px
 
   &__title
     font-size: 1.538em
@@ -34,4 +36,9 @@
     text-align: center
     font-size: 1.1em
     color: $mainC1
-    background: rgba(255,255,255,.98)
+    background: rgba(255,255,255,.95)
+
+    p
+      padding: 30px
+      border: 1px solid $mainC1
+        radius: 50px

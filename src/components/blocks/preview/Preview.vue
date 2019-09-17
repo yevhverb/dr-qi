@@ -1,5 +1,5 @@
 <template>
-  <article class="preview block">
+  <article class="preview block" id="preview">
     <div class="container">
       <div class="preview-grid">
         <div class="preview-grid__col">
@@ -33,7 +33,10 @@
             </article>
           </section>
           <section class="preview__actions">
-            <a class="preview__actions-btn btn btn-primary" href="#catalog" v-scroll-to="'#catalog'">Перейти в каталог</a>
+            <a class="preview__actions-btn btn btn-primary" href="#catalog" 
+              v-scroll-to="{el: '#catalog', offset: mediaQuery('max', 2) ? -75 : 0}">
+              Перейти в каталог
+            </a>
             <span class="preview__actions-group">
               <a class="preview__actions-link" href="#">
                 <i class="fab fa-apple"></i>

@@ -1,0 +1,15 @@
+.header
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  @media (max-width: nth($mediaBp, 2))
+    position: fixed
+    z-index: 9990
+    padding: 10px 0
+    border-bottom: 1px solid #e1e1e1
+    background-color: rgba($mainC3, .99)
+
+    .container
+      @include flex($fd: column)
+  

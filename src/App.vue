@@ -1,5 +1,6 @@
 <template>
   <app-root>
+    <app-header/>
     <main>
       <app-preview/>
       <app-catalog/>
@@ -17,6 +18,7 @@
 
 <script>
 import appRoot from '@/components/Root'
+import appHeader from '@/components/blocks/header/Header'
 import appPreview from '@/components/blocks/preview/Preview'
 import appCatalog from '@/components/blocks/catalog/Catalog'
 import appDiff from '@/components/blocks/diff/Diff'
@@ -32,6 +34,7 @@ export default {
   name: 'app',
   components: {
     appRoot,
+    appHeader,
     appPreview,
     appCatalog,
     appDiff,

@@ -3,7 +3,7 @@
     @submit.prevent="showMessage()">
     <section class="review-modal__info">
       <h3 class="review-modal__title">Ваш отзыв</h3>
-      <p class="review-modal__text">Здесь вы можите оставить свой отзыв о нашей продукции...</p>
+      <p class="review-modal__text">Здесь Вы можете оставить свой отзыв о нашей продукции...</p>
     </section>
     <section class="review-modal__form">
       <div class="review-modal__input input input-person">

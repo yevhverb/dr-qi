@@ -61,7 +61,12 @@ export default {
   data: () => ({
     formOrderOpen: false
   }),
-  methods: mapMutations(['SHOW_MODAL'])
+  methods: mapMutations(['SHOW_MODAL']),
+  mounted() {
+    this.$on('close', () => {
+      this.formOrderOpen = false;
+    });
+  }
 }
 </script>
 

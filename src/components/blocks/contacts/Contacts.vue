@@ -1,5 +1,5 @@
 <template>
-  <article class="contacts block deco">
+  <article class="contacts block deco" id="contacts">
     <div class="container">
       <h2 class="contacts__title title title_white">Есть дополнительные вопросы?</h2>
       <p class="contacts__descr descr">Свяжитесь с нами удобным для Вас способом:</p>

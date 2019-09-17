@@ -1,5 +1,5 @@
 <template>
-  <article class="reviews block">
+  <article class="reviews block" id="reviews">
     <div class="container">
       <h2 class="reviews__title title">Отзывы покупателей</h2>
       <swiper :options="swiperOptions">

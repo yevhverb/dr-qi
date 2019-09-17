@@ -1,5 +1,5 @@
 <template>
-  <article class="order block deco">
+  <article class="order block deco" id="order">
     <div class="container">
       <h2 class="order__title title title_white">Заказать беспроводную зарядку легко</h2>
       <section class="order__benefits">
@@ -39,7 +39,9 @@
       </swiper>
       <transition name="modal">
         <elem-modal v-if="modalOpen && modalName === 'order'">
-          <app-order-modal/>
+          <div :class="{'container': mediaQuery('max', 4)}">
+            <app-order-modal/>
+          </div> 
         </elem-modal>
       </transition>
     </div>

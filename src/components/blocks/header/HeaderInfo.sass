@@ -1,0 +1,105 @@
+.header-info
+  margin-top: 55px 
+  font-size: 15px
+  @media (max-width: nth($mediaBp, 2))
+    margin-top: 0
+    z-index: 10
+    order: -1
+
+  &__info
+    @include flex($jc: space-between)
+    @media (max-width: nth($mediaBp, 2))
+      align-items: center
+
+  &__contacts
+    @include flex($ai: center)
+
+  &__messangers
+    @include flex()
+
+  &__messanger
+    margin-right: 25px
+    font-size: 2.3em
+
+  &__phone 
+
+    > *
+      display: block
+      color: $mainC2
+
+    &-number
+      font-size: 1.6em
+      font-weight: 700
+
+    &-time 
+      font-size: .867em
+
+  &__actions
+
+    &-btn
+      width: 30px
+      height: 30px
+      position: relative 
+      font-size: 2.5em
+      color: $mainC1
+
+      i 
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+
+.header-nav
+
+  &-enter
+    opacity: 0
+    transform: translateY(-5%)
+  
+  &-leave-to
+    opacity: 0
+    transform: translateY(5%)
+
+  &-leave,
+  &-enter-to
+    opacity: 1
+    transform: translateX(0)
+
+  &-enter-active,
+  &-leave-active
+    transition: .35s
+  
+  &-btn
+
+    &-enter
+      opacity: 0
+      transform: translateY(-75%)
+
+    &-leave-to
+      opacity: 0
+      transform: translateY(75%)
+
+    &-leave,
+    &-enter-to
+      opacity: 1
+      transform: translateX(0)
+
+    &-enter-active,
+    &-leave-active
+      transition: .25s, opacity .5s
+
+.logo
+  @include flex($ai: center)
+
+  &__img
+    max-width: 115px
+    @media (max-width: nth($mediaBp, 3))
+      max-width: 90px
+
+
+  &__descr
+    margin-left: 30px
+
+@each $t, $c in $socsC1
+  i[class*='#{$t}']
+    color: $c  

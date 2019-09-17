@@ -37,8 +37,11 @@ export default {
   methods: {
     showMessage() {
       this.messageOpen = true;
-      setTimeout(() => this.messageOpen = false, 3500);
-    }
+      setTimeout(() => {
+        this.messageOpen = false;
+        this.$parent.$emit('close');
+      }, 3500);
+    },
   }
 }
 </script>
