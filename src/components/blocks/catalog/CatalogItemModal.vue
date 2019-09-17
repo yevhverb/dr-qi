@@ -6,7 +6,7 @@
 
         <div class="catalog-item-modal-grid__col">
           <section class="catalog-item-modal__img">
-            <img class="img" src="@/assets/catalog-item.jpg" :alt="item.title">
+            <img class="img" :src="item.image" :alt="item.title">
           </section>
           <section class="catalog-item-modal__benefits">
             <div class="catalog-item-modal__benefit">

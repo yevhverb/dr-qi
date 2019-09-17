@@ -28,7 +28,7 @@
       </swiper>
       <section class="diff__certificate">
         <div class="diff__certificate-img">
-          <img class="img" src="@/assets/diff-certificate.png" alt="certificate">
+          <img class="img" src="img/diff-certificate.png" alt="certificate">
         </div>
         <span class="diff__certificate-descr">Все Аксессуары Dr.Qi стандартизированы и сертифицированы, что, в свою очередь позволяет избежать ряд проблем при их эксплуатации.</span>
       </section>

@@ -2,7 +2,7 @@
   <article class="diff-item card">
     <section class="diff-item__icon">
       <div class="diff-item__icon-container">
-        <img class="img" src="@/assets/diff-icon.jpg" :alt="props.item.title">
+        <img class="img" :src="props.item.image" :alt="props.item.title">
       </div>
     </section>
     <section class="diff-item__info">

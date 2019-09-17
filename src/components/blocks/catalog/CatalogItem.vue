@@ -2,7 +2,7 @@
   <article class="catalog-item card">
     <span class="catalog-item__dscnt">{{-item.dscnt + '%'}}</span>
     <section class="catalog-item__img">
-      <img class="img" src="@/assets/catalog-item.jpg" :alt="item.title">
+      <img class="img" :src="item.image" :alt="item.title">
     </section>
     <section class="catalog-item__info">
       <h3 class="catalog-item__title">{{item.title}}</h3>

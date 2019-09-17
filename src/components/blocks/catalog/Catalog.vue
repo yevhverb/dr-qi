@@ -6,11 +6,17 @@
         <span class="title_accent">Dr.Qi</span>
       </h2>
       <div class="catalog-grid">
-        <div class="catalog-grid__col"
+        <div class="catalog-grid__col" :style="{'display': catalogFullOpen ? 'block' : ''}"
           v-for="item in catalog.items" :key="item.id">
           <app-catalog-item :item="item"/>
         </div>
       </div>
+
+      <button class="catalog__btn-more btn btn-secondary"
+        v-if="mediaQuery('max', 3) && !catalogFullOpen"
+        @click="catalogFullOpen = true">
+        {{'Показать еще 4 устройства'}}
+      </button>
 
       <transition name="modal">
         <elem-modal v-if="modalOpen && modalName === 'catalog-item'">
@@ -23,18 +29,34 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapGetters } from 'vuex';
 
 import appCatalogItem from './CatalogItem';
 import appCatalogItemModal from './CatalogItemModal';
 
 export default {
   name: 'app-catalog',
+  data: () => ({
+    catalogFullOpen: false
+  }),
   components: {
     appCatalogItem,
     appCatalogItemModal
   },
-  computed: mapState(['catalog', 'modalOpen', 'modalName'])
+  computed: {
+    ...mapState({
+      catalog: 'catalog', 
+      modalOpen: 'modalOpen', 
+      modalName: 'modalName',
+      mediaWidth: state => state.media.width
+    }),
+    ...mapGetters(['mediaQuery'])
+  },
+  watch: {
+    mediaWidth(val) {
+      val < 768 ? this.catalogFullOpen = false : null
+    }
+  }
 }
 </script>
 

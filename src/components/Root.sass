@@ -145,6 +145,92 @@ body
   height: 100%
   object-fit: contain
 
+.deco
+  position: relative
+
+  &::before,
+  &::after
+    content: ''
+    position: absolute
+    background: url('../assets/ellipse.png') no-repeat center / cover    
+
+  &::before 
+    top: -11px
+    left: 27%
+    width: 85px
+    height: 85px
+    @media (max-width: nth($mediaBp, 1))
+      left: 17%
+    @media (max-width: nth($mediaBp, 3))
+      top: -7px
+      left: 7%
+      width: 65px
+      height: 65px
+    @media (max-width: nth($mediaBp, 4))
+      top: -5px
+      width: 45px
+      height: 45px
+
+  &::after 
+    bottom: -40px
+    right: 33%
+    width: 105px
+    height: 105px
+    @media (max-width: nth($mediaBp, 1))
+      right: 23%
+    @media (max-width: nth($mediaBp, 3))
+      bottom: -32px
+      right: 13%
+      width: 85px
+      height: 85px
+    @media (max-width: nth($mediaBp, 4))
+      bottom: -25px
+      width: 65px
+      height: 65px
+    
+
+.circle
+  position: relative
+  z-index: 1
+
+  &::before,
+  &::after
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    z-index: -1
+    transform: translate(-50%, -50%) scale(1)
+    border: 1px solid #c1c5c3
+      radius: 50%
+    opacity: 0
+    animation: circle 2.25s infinite
+
+  &::before
+    width: 350px
+    height: 350px
+    animation-delay: .25s
+    @media (max-width: nth($mediaBp, 4))
+      width: 250px
+      height: 250px
+
+  &::after 
+    width: 450px
+    height: 450px
+    @media (max-width: nth($mediaBp, 4))
+      width: 350px
+      height: 350px
+
+@keyframes circle
+  0% 
+    transform: translate(-50%, -50%) scale(0)
+    opacity: 0
+  50%
+    opacity: 1
+  100% 
+    transform: translate(-50%, -50%) scale(1)
+    opacity: 0
+
 @import '@/sass/swiper'
 
 // ============================

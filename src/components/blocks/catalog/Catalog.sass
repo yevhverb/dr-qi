@@ -7,4 +7,12 @@
 
     &-grid
       justify-content: center
+      @media (max-width: nth($mediaBp, 3))
+        &__col:nth-child(n + 3)
+          display: none
+
+  &__btn-more
+    display: block
+    margin: auto
+    margin-top: 35px
 

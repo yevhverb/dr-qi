@@ -3,9 +3,9 @@
     <div class="container">
       <div class="header-info__info">
         <article class="header-info__logo logo">
-          <div class="logo__img">
-            <img class="img" src="@/assets/logo.png" alt="logo">
-          </div>
+          <a class="logo__img" href="#">
+            <img class="img" src="img/logo.png" alt="logo">
+          </a>
           <span class="logo__descr" v-if="mediaQuery('min', 2)">Интернет-магазин гаджетов</span>
         </article>
         <article class="header-info__contacts" v-if="mediaQuery('min', 5)">

@@ -1,5 +1,5 @@
 .catalog-item
-  @include flex($fd: column)
+  @include flex($fd: column, $jc: flex-end)
   position: relative
   max-width: 380px
   width: 100%
@@ -24,7 +24,8 @@
 
   &__img
     flex: 1 0
-    width: 100%  
+    width: 100%
+    max-height: 210px  
 
   &__title
     margin-top: 13px

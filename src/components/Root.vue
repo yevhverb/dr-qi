@@ -5,9 +5,10 @@
 </template>
 
 <script>
-import 'swiper/dist/css/swiper.css'
+import 'swiper/dist/css/swiper.css';
+import 'viewerjs/dist/viewer.css';
 
-import { mapMutations, mapState } from 'vuex';
+import { mapMutations } from 'vuex';
 
 export default {
   name: 'app-root',

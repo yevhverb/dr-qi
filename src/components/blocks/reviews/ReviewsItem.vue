@@ -2,7 +2,7 @@
   <article class="reviews-item  card">
     <section class="reviews-item__photo">
       <div class="reviews-item__photo-container">
-        <img class="img" src="@/assets/reviews-photo.jpg" :alt="props.item.name">
+        <img class="img" :src="props.item.photo" :alt="props.item.name">
       </div>
     </section>
     <section class="reviews-item__info">

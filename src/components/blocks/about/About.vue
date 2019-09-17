@@ -29,8 +29,8 @@
 
         <div class="about-grid__col">
           <article class="about__brand">
-            <section class="about__brand-icon">
-              <img class="img" src="@/assets/logo-lg.png" alt="logo-lg">
+            <section class="about__brand-icon circle">
+              <img class="img" src="img/logo-lg.png" alt="logo-lg">
             </section>
             <!-- <elem-video-btn/> -->
           </article>

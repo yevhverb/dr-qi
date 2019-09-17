@@ -23,14 +23,18 @@ export default {
     ...mapMutations(['SHOW_MODAL']),
     modalClose() {
       const classList = event.target.classList;
-      if (classList.contains('modal-front') || classList.contains('modal-content')) this.SHOW_MODAL({open: false, name: ''});
+      if (classList.contains('modal-front') || classList.contains('fas')) this.SHOW_MODAL({open: false, name: ''});
     }
   },
   beforeCreate() {
+    document.body.setAttribute('style', '');
     document.body.classList.add('modal-lock');
+    document.querySelector('.header-nav').classList.add('modal-lock');
+
   },
   destroyed() {
     document.body.classList.remove('modal-lock');
+    document.querySelector('.header-nav').classList.remove('modal-lock');
   }
 }
 </script>

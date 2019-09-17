@@ -1,7 +1,7 @@
 <template>
   <article class="order-item card">
     <section class="order-item__img">
-      <img class="img" src="@/assets/order-item.jpg" :alt="item.title">
+      <img class="img" :src="item.image" :alt="item.title">
     </section>
     <section class="order-item__info">
       <h3 class="order-item__title">

@@ -21,7 +21,7 @@
     </section>
     <transition name="modal">
       <section class="review-modal__message" v-if="messageOpen">
-        <p>Спасибо за Ваш отзыв...</p>
+        <p>Спасибо за отзыв...</p>
       </section>
     </transition>
   </form>

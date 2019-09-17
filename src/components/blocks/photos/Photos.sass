@@ -5,8 +5,6 @@
     @include grid($c: 3 , $w: wrap, $s: 2.5px)
   @media (max-width: nth($mediaBp, 3))
     @include grid($c: 2 , $w: wrap, $s: 2.5px)
-  @media (max-width: nth($mediaBp, 4))
-    @include grid($c: 1 , $w: wrap, $s: 2.5px)
 
   &-grid 
     margin-top: 30px
@@ -18,7 +16,16 @@
       @media (max-width: nth($mediaBp, 3))
         &:nth-child(n + 5)
           display: none
-      @media (max-width: nth($mediaBp, 4))
-        &:nth-child(n + 4)
-          display: none
+
+  &-item
+    cursor: pointer
+
+.viewer
+
+  &-navbar
+    background-color: transparent
+
+  &-list 
+    li 
+      width: 60px
     

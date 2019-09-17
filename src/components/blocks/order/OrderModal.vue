@@ -18,7 +18,7 @@
     </section>
     <transition name="modal">
       <section class="order-modal__message" v-if="messageOpen">
-        <p>Спасибо наш менеджер с Вами никогда НЕ свяжется...</p>
+        <p>Спасибо! Наш менеджер с Вами НЕ свяжется...</p>
       </section>
     </transition>
   </form>
@@ -38,7 +38,7 @@ export default {
       setTimeout(() => {
         this.messageOpen = false;
         this.SHOW_MODAL({open: false, name: '', data: {}});
-      }, 2000)
+      }, 2250)
     }
   }
 }

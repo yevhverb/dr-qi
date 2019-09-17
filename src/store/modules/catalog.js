@@ -4,7 +4,7 @@ export default {
       {
         id: 'catalog-item-1',
         title: 'Basic Solution',
-        image: '',
+        image: 'img/catalog-item-1.jpg',
         avail: true,
         descr: 'Идеальное решение для дома, бизнес-центров, кафе, ресторанов, аэропортов, железнодорожных станций и других общественных мест. Простота установки и безопасность использования.',
         colors: ['#fff', '#000'],
@@ -52,7 +52,7 @@ export default {
       {
         id: 'catalog-item-2',
         title: 'Premium Solution',
-        image: '',
+        image: 'img/catalog-item-2.jpg',
         avail: true,
         descr: 'Домашнее зарядное устройство De Luxe, выполненное в сочетании с металлом и стеклом, является стильным и приятным в использовании. Выбор цвета, соответствующего вашему интерьеру.',
         colors: ['#fff', '#000', '#2d4e80', '#e01221'],
@@ -100,7 +100,7 @@ export default {
       {
         id: 'catalog-item-3',
         title: 'Desktop Embedded Fast Charge Solution',
-        image: '',
+        image: 'img/catalog-item-3.jpg',
         avail: true,
         descr: 'Идеальное решение для бизнес-центров, кафе, ресторанов, аэропортов, железнодорожных станций и других общественных мест. Простота установки и безопасность использования.',
         colors: ['#000'],
@@ -148,7 +148,7 @@ export default {
       {
         id: 'catalog-item-4',
         title: 'Office Smart Solution',
-        image: '',
+        image: 'img/catalog-item-4.jpg',
         avail: false,
         descr: 'Не пропускайте сообщения и держите смартфон под рукой во время зарядки. Подставка удобна для видеозвонков во время зарядки. Смартфон можно разместить горизонтально, так и по вертикали.',
         colors: ['#000'],
@@ -196,7 +196,7 @@ export default {
       {
         id: 'catalog-item-5',
         title: 'Aqua',
-        image: '',        
+        image: 'img/catalog-item-5.jpg',        
         avail: true,
         descr: 'Dr Qi Aqua Wireless Chargers были созданы для людей, которые заботятся о своем образе жизни. Доступный и стильный - он сделает вас немного счастливее каждый день.',
         colors: ['#fff', '#000'],
@@ -244,7 +244,7 @@ export default {
       {
         id: 'catalog-item-6',
         title: 'Car Perfect Fit solution',
-        image: '',
+        image: 'img/catalog-item-6.jpg',
         avail: true,
         descr: 'Элегантная комбинация из металла и пластика будет выглядеть идеально в любом автомобиле. Это зарядное устройство имеет вентиляцию, чтобы предотвратить перегрев вашего устройства.',
         colors: ['#fff', '#000'],

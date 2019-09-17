@@ -1,11 +1,12 @@
 <template>
-  <article class="preview block" id="preview">
+  <article class="preview block" id="preview"
+    :style="{'background-image': ``}">
     <div class="container">
       <div class="preview-grid">
         <div class="preview-grid__col">
           <!-- <elem-btn-video/> -->
-          <section class="preview__img">
-            <img class="img" src="@/assets/preview-prod.png" alt="product">
+          <section class="preview__img circle">
+            <img class="img" src="img/preview-product.png" alt="product">
           </section>
         </div>
         <div class="preview-grid__col">

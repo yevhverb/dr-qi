@@ -8,6 +8,9 @@ Vue.use(VueScrollTo);
 import VueScrollactive from 'vue-scrollactive';
 Vue.use(VueScrollactive);
 
+import Viewer from 'v-viewer';
+Vue.use(Viewer);
+
 import elemModal from '@/components/elems/modal/Modal';
 Vue.component('elem-modal', elemModal);
 

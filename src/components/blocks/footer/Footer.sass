@@ -1,2 +1,28 @@
 .footer
+  @include grid($w: wrap)
   padding: 30px 0
+  font-size: 13px    
+
+  &-grid 
+    align-items: center
+    justify-content: space-between
+    @media (max-width: nth($mediaBp, 4))
+      justify-content: center
+
+  &__logo
+    @media (max-width: nth($mediaBp, 4))
+      flex-wrap: wrap
+      justify-content: center
+    
+    &-descr
+      color: $mainC2
+      text-decoration: underline
+      @media (max-width: nth($mediaBp, 4))
+        margin-left: 0
+        margin-top: 20px
+
+  &__dev
+
+    > *
+      display: block
+
