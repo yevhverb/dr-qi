@@ -19,8 +19,10 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.11.0",
     "@vue/cli-service": "^3.11.0",
+    "prerender-spa-plugin": "^3.2.1",
     "sass": "^1.18.0",
     "sass-loader": "^7.1.0",
+    "vue-cli-plugin-prerender-spa": "^1.1.6",
     "vue-template-compiler": "^2.6.10"
   },
   "postcss": {
